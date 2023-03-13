@@ -69,7 +69,7 @@ void Clockwise::drawQuadrant(int up_left_x, int up_left_y, const String &center_
     text_x = final_rect_x;
     text_y = final_rect_y + FONT_OFFSET;
 
-    if (num_fill >= 10) {
+    if (num_fill >= 10 || lead_zero) {
         // Cases where value to display has two digits but there's not enough space to draw both:
         switch (of_twelve) {
             case 1:
